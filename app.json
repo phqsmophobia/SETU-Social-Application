@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "SETU-Social-Application",
-    "slug": "SETU-Social-Application",
+    "slug": "setu-social",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c627ad64-fee0-44fc-a215-89c70cc3b5cc"
+      }
+    },
+    "owner": "ciaran-04"
   }
 }
