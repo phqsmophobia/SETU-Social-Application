@@ -175,8 +175,6 @@ All ongoing project management lives in [`/docs`](./docs). Update these from the
 
 ---
 
-## 🚀 Getting Started *(optional — for code projects)*
-
 
 ---
 
