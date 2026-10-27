@@ -15,6 +15,13 @@ export const globalstyle = StyleSheet.create({
         justifyContent: "center",
     },
 
+    containertopflow: {
+        flex:1,
+        flexDirection:"column",
+        alignItems:"center",
+        justifyContent:"flex-start"
+    },
+
     containersignup: {
         flex:1,
     },
@@ -60,6 +67,15 @@ export const globalstyle = StyleSheet.create({
         color:colours.maindarkSETU,
     },
 
+    skipbutton: {
+        padding:10,
+        paddingTop:18,
+        paddingHorizontal:40,
+        fontSize:14,
+        backgroundColor: 'transparent',
+        color:"#0054a9",
+    },
+
     inputabovetext: {
         fontSize:15,
         color: colours.mainSETU,
@@ -93,5 +109,15 @@ export const globalstyle = StyleSheet.create({
     nextbuttonpress: {
         backgroundColor: colours.maindarkSETU,
         color:colours.textSETU,
+    },
+
+    signinput: {
+        borderWidth:0.5,
+        borderRadius:18,
+        marginVertical:10,
+        marginBottom:10,
+        color:colours.maindarkSETU,
+        padding:10,
+        width:280,
     },
   });
