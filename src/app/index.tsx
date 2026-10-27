@@ -10,9 +10,9 @@ export default function Index() {
         <View style={globalstyle.rowflow}><Text style={globalstyle.inputabovetext}>Email</Text></View>
         <TextInput style={globalstyle.loginput} placeholder="SETUuser@setu.ie" placeholderTextColor="#6a6a6a" keyboardType="email-address"/>
         <View style={globalstyle.rowflow}><Text style={globalstyle.inputabovetext}>Password</Text></View>
-        <TextInput style={globalstyle.loginput} placeholder="password" placeholderTextColor="#6a6a6a" keyboardType="default"/>
+        <TextInput style={globalstyle.loginput} placeholder="password" autoCapitalize="none" secureTextEntry placeholderTextColor="#6a6a6a" keyboardType="default"/>
         <Pressable onPress={() => router.push("/homepage")}><Text style={globalstyle.loginbutton}>Login</Text></Pressable>
-        <Pressable onPress={() => alert("under construction")}><Text style={globalstyle.signupbutton}>not registered? Signup here</Text></Pressable>
+        <Pressable onPress={() => router.push("/signup")}><Text style={globalstyle.signupbutton}>not registered? Signup here</Text></Pressable>
     </SafeAreaView>
   );
 }

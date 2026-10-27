@@ -27,15 +27,16 @@ export const globalstyle = StyleSheet.create({
         borderWidth:0.5,
         borderRadius:18,
         marginVertical:10,
+        marginBottom:15,
         color:colours.maindarkSETU,
         padding:10,
-        width:240,
+        width:280,
     },
 
     loginbutton: {
         borderRadius:18,
         padding:10,
-        paddingHorizontal:40,
+        paddingHorizontal:48,
         marginTop:12,
         borderColor:'transparent',
         backgroundColor: colours.mainSETU,
@@ -62,7 +63,16 @@ export const globalstyle = StyleSheet.create({
 
     rowflow: {
         flexDirection:'row',
-        width:225,
+        width:260,
         justifyContent:'flex-start',
-    }
+    },
+
+    scrollview: {
+        flex: 1,
+    },
+
+    scrollviewsetup: {
+        alignItems: "center",
+        paddingVertical: 25,
+    },
   });
