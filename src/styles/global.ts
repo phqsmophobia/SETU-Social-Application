@@ -15,6 +15,10 @@ export const globalstyle = StyleSheet.create({
         justifyContent: "center",
     },
 
+    containersignup: {
+        flex:1,
+    },
+
     title: {
         fontSize:42,
         color: colours.mainSETU,
@@ -63,7 +67,7 @@ export const globalstyle = StyleSheet.create({
 
     rowflow: {
         flexDirection:'row',
-        width:260,
+        width:265,
         justifyContent:'flex-start',
     },
 
@@ -74,5 +78,20 @@ export const globalstyle = StyleSheet.create({
     scrollviewsetup: {
         alignItems: "center",
         paddingVertical: 25,
+    },
+
+    nextbutton: {
+        borderRadius:18,
+        padding:10,
+        paddingHorizontal:125,
+        marginTop:12,
+        borderColor:'transparent',
+        backgroundColor: colours.mainSETU,
+        color:colours.textSETU,
+    },
+
+    nextbuttonpress: {
+        backgroundColor: colours.maindarkSETU,
+        color:colours.textSETU,
     },
   });
