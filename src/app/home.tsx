@@ -78,7 +78,7 @@ export default function Index() {
           <Ico width={25}height={25}colors={{ "#000000": "#4597f5" }} name="house-line"/>
           <Text style={globalstyle.botnavtxtsel}>Home</Text>
         </Pressable>
-        <Pressable style={globalstyle.botflowholder}>
+        <Pressable style={globalstyle.botflowholder} onPress={() => router.push("/foryou")}>
           <Ico width={25}height={25}colors={{ "#000000": colours.mainSETU }} name="chirstmas-star"/>
           <Text style={globalstyle.botnavtxt}>FYP</Text>
         </Pressable>
