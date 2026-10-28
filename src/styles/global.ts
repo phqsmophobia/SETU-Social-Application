@@ -156,7 +156,7 @@ export const globalstyle = StyleSheet.create({
     },
 
     hometopnav:{
-        height: 70,
+        height: 50,
         flexDirection: "row",
         width:"100%",
         alignItems: "center",
@@ -169,5 +169,25 @@ export const globalstyle = StyleSheet.create({
         fontSize: 20,
         fontWeight: "bold",
         color: colours.maindarkSETU,
+    },
+
+    homebottomnav:{
+        height: 60,
+        flexDirection: "row",
+        width:"100%",
+        alignItems: "center",
+        justifyContent: "space-around",
+        paddingHorizontal: 20,
+        backgroundColor:"#e1e1e1",
+    },
+
+    botnavtxt:{
+        color:colours.maindarkSETU,
+        textAlign:"center",
+    },
+
+    botflowholder:{
+        flexDirection:"column",
+        alignItems: "center",
     }
   });
