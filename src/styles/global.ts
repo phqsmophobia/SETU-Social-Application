@@ -182,12 +182,27 @@ export const globalstyle = StyleSheet.create({
     },
 
     botnavtxt:{
-        color:colours.maindarkSETU,
+        color:colours.mainSETU,
+        textAlign:"center",
+    },
+
+    botnavtxtsel:{
+        color:"#4597f5",
         textAlign:"center",
     },
 
     botflowholder:{
         flexDirection:"column",
         alignItems: "center",
+    },
+
+    recttile:{
+        width: "95%",
+        padding: 15,
+        alignSelf: "center",
+        marginVertical: 10,
+        minHeight: 180,
+        backgroundColor: "#d8d8d8",
+        borderRadius: 15,
     }
   });

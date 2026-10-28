@@ -1,4 +1,4 @@
-import { globalstyle } from "@/styles/global";
+import { colours, globalstyle } from "@/styles/global";
 import { router } from "expo-router";
 import { Alert, Pressable, ScrollView, Text, View } from "react-native";
 import Ico from "react-native-ico-dazzle-line";
@@ -14,15 +14,20 @@ export default function Index() {
         </Pressable>
       </View>
       <ScrollView style={{backgroundColor:"#ebebeb",width:"100%"}}>
-        <Text>hi</Text>
+        <View style={globalstyle.recttile}>
+
+        </View>
+        <View style={globalstyle.recttile}>
+
+        </View>
       </ScrollView>
       <View style={globalstyle.homebottomnav}>
         <Pressable style={globalstyle.botflowholder}>
-          <Ico width={25}height={25}colors={{ "#000000": "#2c3742" }} name="house-line"/>
-          <Text style={globalstyle.botnavtxt}>Home</Text>
+          <Ico width={25}height={25}colors={{ "#000000": "#4597f5" }} name="house-line"/>
+          <Text style={globalstyle.botnavtxtsel}>Home</Text>
         </Pressable>
         <Pressable style={globalstyle.botflowholder}>
-          <Ico width={25}height={25}colors={{ "#000000": "#2c3742" }} name="chirstmas-star"/>
+          <Ico width={25}height={25}colors={{ "#000000": colours.mainSETU }} name="chirstmas-star"/>
           <Text style={globalstyle.botnavtxt}>FYP</Text>
         </Pressable>
       </View>
