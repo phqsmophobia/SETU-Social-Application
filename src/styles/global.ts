@@ -156,12 +156,13 @@ export const globalstyle = StyleSheet.create({
     },
 
     hometopnav:{
-        height: 60,
+        height: 70,
         flexDirection: "row",
         width:"100%",
         alignItems: "center",
         justifyContent: "space-between",
         paddingHorizontal: 20,
+        backgroundColor:"#e1e1e1",
     },
 
     hometitle:{
