@@ -158,8 +158,15 @@ export const globalstyle = StyleSheet.create({
     hometopnav:{
         height: 60,
         flexDirection: "row",
+        width:"100%",
         alignItems: "center",
         justifyContent: "space-between",
         paddingHorizontal: 20,
+    },
+
+    hometitle:{
+        fontSize: 20,
+        fontWeight: "bold",
+        color: colours.maindarkSETU,
     }
   });

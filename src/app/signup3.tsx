@@ -44,7 +44,7 @@ export default function Index() {
                   </Pressable>);})}
             </View></ScrollView>
           <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
-          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.signupbutton}>Skip for now</Text></Pressable>
+          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.skipbutton}>Skip for now</Text></Pressable>
       </SafeAreaView>
     </ImageBackground>
   );
