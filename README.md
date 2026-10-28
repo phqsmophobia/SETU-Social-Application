@@ -93,7 +93,7 @@ The application will be developed as a cross-platform mobile application, allowi
 | **Platform** | *Android & iOS* | *Student's use multiple mobile device platforms.* |
 | **Language(s)** | *TypeScript/JavaScript* | *Core implementation* |
 | **Frontend** | *React Native, CSS Styling* | *User interface* |
-| **Backend / API** | *---* | *Application logic* |
+| **Backend / API** | *Supabase* | *Application logic* |
 | **Database** | *PostgreSQL, Supabase* | *User Data storage* |
 | **Infrastructure / Hosting** | *Cloudflare, Expo* | *Deployment* |
 | **Testing** | *---* | *Quality assurance* |
