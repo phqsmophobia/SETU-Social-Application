@@ -204,5 +204,49 @@ export const globalstyle = StyleSheet.create({
         minHeight: 180,
         backgroundColor: "#d8d8d8",
         borderRadius: 15,
+    },
+
+    notice:{
+        color: colours.textSETU,
+        fontSize: 16,
+        backgroundColor:"#2c3742ee",
+        borderRadius:15,
+        textAlign:"center",
+        maxWidth:180,
+        paddingHorizontal:10,
+        marginHorizontal:5,
+        fontWeight: "300",
+        padding:5,
+    },
+
+    titlenote:{
+        color: colours.mainSETU,
+        fontSize: 19,
+        marginHorizontal:5,
+        fontWeight: "800",
+        padding:3,
+    },
+
+    datenotes:{
+        color: colours.mainSETU,
+        fontSize: 12,
+        fontWeight: "600",
+        marginHorizontal:5,
+        padding:3,
+    },
+
+    datenote:{
+        color: colours.mainSETU,
+        fontSize: 14,
+        marginHorizontal:5,
+        padding:3,
+    },
+
+    notelink:{
+        color: colours.mainSETU,
+        fontSize: 14,
+        textDecorationLine:"underline",
+        marginHorizontal:5,
+        padding:3,
     }
   });
