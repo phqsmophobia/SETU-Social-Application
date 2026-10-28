@@ -8,7 +8,8 @@ export default function Index() {
   return (
     <ImageBackground source={require("@/assets/images/background/signupbg.png")} style={globalstyle.containersignup} resizeMode="cover">
         <SafeAreaView style={globalstyle.container}>
-                <Text style={{marginTop:155,fontSize:23, color: colours.maindarkSETU, fontWeight: 'bold',}}>Lets Get Started!</Text>
+                <Pressable onPress={() => router.push("/")}><Ico width={40} height={40} style={{marginRight:320,marginBottom:5}} colors={{"#000000":"#f1f2f3"}} name="arrow-left"/></Pressable>
+                <Text style={{marginTop:110,fontSize:23, color: colours.maindarkSETU, fontWeight: 'bold',}}>Lets Get Started!</Text>
                 <Text style={{marginTop:5,marginBottom:20,fontSize:16, color: colours.mainSETU}}>Join the SETU social experience.</Text>
                 <View style={globalstyle.rowflow}><Ico style={{marginRight:7}} colors={{"#000000":"#2c3742"}} name='user'/><Text style={globalstyle.inputabovetext}>First Name</Text></View>
                 <TextInput style={globalstyle.signinput} placeholder=" Enter your first name" placeholderTextColor="#6a6a6a"/>

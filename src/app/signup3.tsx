@@ -1,22 +1,50 @@
 import { colours, globalstyle } from "@/styles/global";
 import { router } from "expo-router";
-import { ImageBackground, Pressable, Text, TextInput, View } from "react-native";
+import { useState } from "react";
+import { ImageBackground, Pressable, ScrollView, Text, View } from "react-native";
 import Ico from 'react-native-ico-dazzle-line';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const categories_selection = [
+    { id: "Technology", icon: "technology" },
+    { id: "Gaming", icon: "gaming" },
+    { id: "Art", icon: "art" },
+    { id: "Photography", icon: "camera" },
+    { id: "Languages", icon: "talk" },
+    { id: "Food & Drink", icon: "food" },
+    { id: "Music", icon: "music" },
+    { id: "Dancing", icon: "music" },
+    { id: "Sports", icon: "sports" },
+    { id: "Environment", icon: "environment" },
+    { id: "Volunteering", icon: "volunteering" },
+    { id: "Fitness", icon: "fitness" },
+    { id: "Social Events", icon: "social" },
+    { id: "Fishing", icon: "fish" },
+    { id: "Cycling", icon: "bike" },
+    { id: "Films & Movies", icon: "movie" },
+  ];
+  const [selectedinterestslist, setinterestlist] = useState<string[]>([]);
+  const toggle = (id: string) => {
+  if (selectedinterestslist.includes(id)) {
+    setinterestlist(selectedinterestslist.filter(item => item !== id));
+    } else {setinterestlist([...selectedinterestslist, id]);}
+  };
   return (
     <ImageBackground source={require("@/assets/images/background/signupfollow.png")} style={globalstyle.containersignup} resizeMode="cover">
       <SafeAreaView style={globalstyle.containertopflow}>
           <Pressable onPress={() => router.push("/signup2")}><Ico width={40} height={40} style={{marginRight:320,marginTop:15}} colors={{"#000000":"#2c3742"}} name="arrow-left"/></Pressable>
-              <Text style={{marginTop:148,fontSize:23, color: colours.maindarkSETU, fontWeight: 'bold',}}>Choose Your Interests!</Text>
-              <Text style={{marginTop:10,marginBottom:20,fontSize:16, color: colours.mainSETU}}>Help us personalise your experience.</Text>
-              <View style={globalstyle.rowflow}><Ico style={{marginRight:7}} colors={{"#000000":"#2c3742"}} name='user'/><Text style={globalstyle.inputabovetext}>Faculty</Text></View>
-              <TextInput style={globalstyle.signinput} placeholder=" Enter your first name" placeholderTextColor="#6a6a6a"/>
-              <View style={globalstyle.rowflow}><Ico colors={{"#000000":"#2c3742"}} style={{marginRight:7}} name='user'/><Text style={globalstyle.inputabovetext}>Campus</Text></View>
-              <TextInput style={globalstyle.signinput} placeholder="Enter your last name" placeholderTextColor="#6a6a6a"/>
-          <Pressable onPress={() => router.push("/")}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
-          <Pressable onPress={() => router.push("/")}><Text style={globalstyle.signupbutton}>Skip for now</Text></Pressable>
+            <Text style={{marginTop:148,fontSize:23, color: colours.maindarkSETU, fontWeight: 'bold',}}>Choose Your Interests!</Text>
+            <Text style={{marginTop:10,marginBottom:20,fontSize:16, color: colours.mainSETU,textAlign:"center"}}>Select from categories below to help us better understand you.</Text>
+            <ScrollView style={{maxHeight:300,maxWidth:350,marginBottom:20}}><View style={globalstyle.categoriesContainer}>
+              {categories_selection.map((category) => {
+                const selected =selectedinterestslist.includes(category.id);
+                return (<Pressable key={category.id} style={[globalstyle.catbtn, selected && globalstyle.catbtnsel,]} onPress={() => toggle(category.id)}>
+                    <Text style={[globalstyle.cattxt,selected && globalstyle.catsel,]}>{category.id}</Text>
+                  </Pressable>);})}
+            </View></ScrollView>
+          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
+          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.signupbutton}>Skip for now</Text></Pressable>
       </SafeAreaView>
     </ImageBackground>
   );

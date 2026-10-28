@@ -107,7 +107,7 @@ export const globalstyle = StyleSheet.create({
     },
 
     nextbuttonpress: {
-        backgroundColor: colours.maindarkSETU,
+        backgroundColor:colours.maindarkSETU,
         color:colours.textSETU,
     },
 
@@ -120,4 +120,46 @@ export const globalstyle = StyleSheet.create({
         padding:10,
         width:280,
     },
+
+    categoriesContainer: {
+        flexDirection:"row",
+        flexWrap:"wrap",
+        justifyContent:"space-between",
+        rowGap:4,
+    },
+
+    catbtn: {
+        width:"48%",
+        minHeight:52,
+        backgroundColor:"#eef0f2",
+        borderRadius:5,
+        paddingLeft:10,
+        paddingRight:10,
+        paddingTop:10,
+        paddingBottom:10,
+        justifyContent:"center",
+    },
+
+    catbtnsel: {
+        backgroundColor:colours.maindarkSETU,
+    },
+
+    cattxt: {
+        color:colours.maindarkSETU,
+        fontSize:13,
+        fontStyle:"italic",
+        fontWeight:"600",
+    },
+
+    catsel: {
+        color:"#ffffff",
+    },
+
+    hometopnav:{
+        height: 60,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingHorizontal: 20,
+    }
   });
