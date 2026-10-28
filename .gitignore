@@ -42,6 +42,3 @@ example
 /ios
 /android
 
-# package
-package-lock.json
-package.json
