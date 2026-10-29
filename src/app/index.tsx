@@ -18,7 +18,10 @@ export default function Index() {
         alert(error.message);
         return;
       }
-      router.replace("/home");
+      router.replace({
+        pathname: "/home",
+        params: { email: email.trim() },
+      });
   }
   return (
     <ImageBackground source={require("@/assets/images/background/loginbg.png")} style={globalstyle.containersignup} resizeMode="cover">
