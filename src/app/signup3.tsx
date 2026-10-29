@@ -65,8 +65,8 @@ export default function Index() {
                     <Text style={[globalstyle.cattxt,selected && globalstyle.catsel,]}>{category.id}</Text>
                   </Pressable>);})}
             </View></ScrollView>
-          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
-          <Pressable onPress={() => router.push("/signup4")}><Text style={globalstyle.skipbutton}>Skip for now</Text></Pressable>
+          <Pressable onPress={submituser}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
+          <Pressable onPress={submituser}><Text style={globalstyle.skipbutton}>Skip for now</Text></Pressable>
       </SafeAreaView>
     </ImageBackground>
   );
