@@ -121,6 +121,7 @@ graph TD
     R --> RM["📄 README.md"]
     R --> tsconfig.json
     SRC --> APP["📂 app/"]
+    SRC --> LIB["📂 lib/"]
     SRC --> STY["📂 styles/"]
     DOCS --> D1["01-project-timeline.md"]
     DOCS --> D2["02-gantt-chart.md"]
@@ -129,6 +130,7 @@ graph TD
     APP --> A1["_layout.tsx"]
     APP --> A2["homepage.tsx"]
     APP --> A3["index.tsx"]
+    LIB --> SUP["supabase.ts"]
     STY --> GLB["global.ts"]
     ASS --> EXI["📂 expo.icon"]
     ASS --> IMG["📂 images"]
