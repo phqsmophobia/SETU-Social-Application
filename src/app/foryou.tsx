@@ -1,10 +1,11 @@
 import { colours, globalstyle } from "@/styles/global";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { Alert, Linking, Pressable, ScrollView, Text, View } from "react-native";
 import Ico from "react-native-ico-dazzle-line";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const {email}= useLocalSearchParams();
   return (
     <SafeAreaView style={[globalstyle.containertopflow,{backgroundColor:"#e1e1e1"}]}>
       <View style={globalstyle.hometopnav}>
@@ -34,7 +35,7 @@ export default function Index() {
         </View>
       </ScrollView>
       <View style={globalstyle.homebottomnav}>
-        <Pressable style={globalstyle.botflowholder} onPress={() => router.push("/home")}>
+        <Pressable style={globalstyle.botflowholder} onPress={() => router.push({ pathname: "/home", params: {email: email}})}>
           <Ico width={25}height={25}colors={{ "#000000": colours.mainSETU }} name="house-line"/>
           <Text style={globalstyle.botnavtxt}>Home</Text>
         </Pressable>
