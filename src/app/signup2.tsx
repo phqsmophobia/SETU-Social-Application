@@ -1,11 +1,12 @@
 import { colours, globalstyle } from "@/styles/global";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { ImageBackground, Pressable, ScrollView, Text, View } from "react-native";
 import Ico from 'react-native-ico-dazzle-line';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const details = useLocalSearchParams();
   const [faculty, setfaculty] = useState("Select faculty");
   const [open, set] = useState(false);
   const [location, setlocation] = useState("Select Campus");
