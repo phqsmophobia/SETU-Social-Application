@@ -1,11 +1,13 @@
 import { colours, globalstyle } from "@/styles/global";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { ImageBackground, Pressable, ScrollView, Text, View } from "react-native";
 import Ico from 'react-native-ico-dazzle-line';
 import { SafeAreaView } from "react-native-safe-area-context";
+import { supabase } from "../lib/supabase";
 
 export default function Index() {
+  const details = useLocalSearchParams();
   const categories_selection = [
     { id: "Technology", icon: "technology" },
     { id: "Gaming", icon: "gaming" },
@@ -30,6 +32,26 @@ export default function Index() {
     setinterestlist(selectedinterestslist.filter(item => item !== id));
     } else {setinterestlist([...selectedinterestslist, id]);}
   };
+
+  const submituser = async () => {
+    const {error} = await supabase
+    .from("users")
+    .insert({
+      fullname: details.first_name + " " + details.last_name,
+      username: details.username,
+      email: details.email,
+      interests: selectedinterestslist,
+      faculty: details.faculty,
+      campus: details.campus,
+      role_level: "Student",
+    });
+
+    if (error) {
+      alert("Error Creating Account.");
+      return;
+    }
+    router.push("/signup4");
+};
   return (
     <ImageBackground source={require("@/assets/images/background/signupfollow.png")} style={globalstyle.containersignup} resizeMode="cover">
       <SafeAreaView style={globalstyle.containertopflow}>

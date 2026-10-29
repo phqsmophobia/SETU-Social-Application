@@ -7,10 +7,18 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const details = useLocalSearchParams();
-  const [faculty, setfaculty] = useState("Select faculty");
+  const [faculty, setfaculty] = useState("Not Selected");
   const [open, set] = useState(false);
-  const [location, setlocation] = useState("Select Campus");
+  const [location, setlocation] = useState("Not Selected");
   const [open2, set2] = useState(false);
+
+  const nextsignuppage = () => {
+    details.faculty = faculty;
+    details.campus = location;
+    router.push({
+    pathname: "/signup3",
+    params: {...details,interests: JSON.stringify(details.interests)}});
+  }
   return (
     <ImageBackground source={require("@/assets/images/background/signupfollow.png")} style={globalstyle.containersignup} resizeMode="cover">
       <SafeAreaView style={globalstyle.containertopflow}>
@@ -39,8 +47,8 @@ export default function Index() {
                 <Text style={{color:colours.maindarkSETU}}>{i}</Text>
               </Pressable>))}
           </View>
-          <Pressable onPress={() => router.push("/signup3")}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
-          <Pressable onPress={() => router.push("/signup3")}><Text style={globalstyle.skipbutton}>Skip for now</Text></Pressable>
+          <Pressable onPress={nextsignuppage}><Text style={globalstyle.nextbutton}>Next</Text></Pressable>
+          <Pressable onPress={nextsignuppage}><Text style={globalstyle.skipbutton}>Skip for now</Text></Pressable>
       </SafeAreaView>
     </ImageBackground>
   );

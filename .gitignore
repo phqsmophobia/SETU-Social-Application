@@ -42,3 +42,5 @@ example
 /ios
 /android
 
+
+src/lib/supabase.ts
