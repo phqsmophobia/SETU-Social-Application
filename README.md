@@ -146,8 +146,15 @@ project-root/
 ├── src/
 │   ├── app/
 │       ├── _layout.tsx
-│       ├── homepage.tsx
+│       ├── foryou.tsx
+│       ├── home.tsx
 │       ├── index.tsx
+│       ├── signup.tsx
+│       ├── signup2.tsx
+│       ├── signup3.tsx
+│       ├── signup4.tsx
+│   ├── lib/
+│       ├── supabase.ts
 │   ├── styles/
 │       ├── global.ts
 ├── docs/
