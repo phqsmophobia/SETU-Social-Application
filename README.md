@@ -1,4 +1,4 @@
-# 📌 SETU Social
+# SETU Social
 
 > **One-line pitch:** *An application designed as an all-in-one source that promotes social events and gatherings amongst Students and members of the SETU community to promote social engagement & interaction.*
 
