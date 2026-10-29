@@ -34,10 +34,26 @@ export default function Index() {
   };
 
   const submituser = async () => {
-    const {error} = await supabase
+    const {data,error} = await supabase.auth.signUp({
+      email: String(details.email).trim(),
+      password: String(details.password),
+    });
+
+    if (error) {
+      alert(error.message);
+      return;
+    }
+
+    if (!data.user) {
+      alert("Account could not be created.");
+      return;
+    }
+
+    const {error: serror} = await supabase
     .from("users")
     .insert({
-      fullname: details.first_name + " " + details.last_name,
+      id: data.user?.id,
+      full_name: details.first_name + " " + details.last_name,
       username: details.username,
       email: details.email,
       interests: selectedinterestslist,
@@ -46,8 +62,8 @@ export default function Index() {
       role_level: "Student",
     });
 
-    if (error) {
-      alert("Error Creating Account.");
+    if (serror) {
+      alert(serror.message);
       return;
     }
     router.push("/signup4");
