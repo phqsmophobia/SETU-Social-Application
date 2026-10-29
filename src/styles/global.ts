@@ -219,6 +219,19 @@ export const globalstyle = StyleSheet.create({
         padding:5,
     },
 
+    noticefyp:{
+        color: colours.maindarkSETU,
+        fontSize: 16,
+        backgroundColor:"#ffd034ee",
+        borderRadius:15,
+        textAlign:"center",
+        maxWidth:180,
+        paddingHorizontal:10,
+        marginHorizontal:5,
+        fontWeight: "500",
+        padding:5,
+    },
+
     titlenote:{
         color: colours.mainSETU,
         fontSize: 19,

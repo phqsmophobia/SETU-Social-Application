@@ -33,6 +33,20 @@ export default function Index() {
               </View>
             </View>
         </View>
+        <View style={[globalstyle.recttile,{marginTop:20}]}>
+            <View style={{flexDirection:"row"}}>
+              <View style={{width:"15%",flexDirection:"column",justifyContent:"center",alignItems:"center",marginBottom:100}}>
+                <Ico width={50}height={50}colors={{ "#000000": colours.maindarkSETU }} name="calendar-alt"/>
+              </View>
+              <View style={{width:"85%",flexDirection:"column",alignSelf: "flex-start",}}>
+                <Text style={globalstyle.noticefyp}>For You</Text>
+                <Text style={globalstyle.titlenote}>Engineering Technology Careers Fair</Text>
+                <Text style={globalstyle.datenotes}>Tuesday, 9:30 - 12:30</Text>
+                <Text style={globalstyle.datenote}>03 November 2026</Text>
+                <Text style={globalstyle.notelink} onPress={() => Linking.openURL("https://www.setu.ie/events/engineering-technology-careers-fair-2")}>Find out more details here</Text>
+              </View>
+            </View>
+        </View>
       </ScrollView>
       <View style={globalstyle.homebottomnav}>
         <Pressable style={globalstyle.botflowholder} onPress={() => router.push({ pathname: "/home", params: {email: email}})}>
