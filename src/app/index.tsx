@@ -24,9 +24,9 @@ export default function Index() {
     <ImageBackground source={require("@/assets/images/background/loginbg.png")} style={globalstyle.containersignup} resizeMode="cover">
       <SafeAreaView style={globalstyle.container}>
           <View style={globalstyle.rowflow}><Text style={globalstyle.inputabovetext}>Email</Text></View>
-          <TextInput style={globalstyle.loginput} placeholder="SETUuser@setu.ie" value={password} onChangeText={setpass} placeholderTextColor="#6a6a6a" keyboardType="email-address"/>
+          <TextInput style={globalstyle.loginput} placeholder="SETUuser@setu.ie" value={email} onChangeText={setemail} placeholderTextColor="#6a6a6a" keyboardType="email-address"/>
           <View style={globalstyle.rowflow}><Text style={globalstyle.inputabovetext}>Password</Text></View>
-          <TextInput style={globalstyle.loginput} placeholder="password" autoCapitalize="none" value={email} onChangeText={setemail} secureTextEntry placeholderTextColor="#6a6a6a" keyboardType="default"/>
+          <TextInput style={globalstyle.loginput} placeholder="password" autoCapitalize="none" value={password} onChangeText={setpass} secureTextEntry placeholderTextColor="#6a6a6a" keyboardType="default"/>
           <Pressable onPress={checkforuser}><Text style={globalstyle.loginbutton}>Login</Text></Pressable>
           <Pressable onPress={() => router.push("/signup")}><Text style={globalstyle.signupbutton}>not registered? Signup here</Text></Pressable>
       </SafeAreaView>
