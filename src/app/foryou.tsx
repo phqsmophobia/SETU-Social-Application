@@ -39,7 +39,7 @@ export default function Index() {
                 <Ico width={50}height={50}colors={{ "#000000": colours.maindarkSETU }} name="calendar-alt"/>
               </View>
               <View style={{width:"85%",flexDirection:"column",alignSelf: "flex-start",}}>
-                <Text style={globalstyle.noticefyp}>For You</Text>
+                <Text style={globalstyle.noticefyp}>Engineering</Text>
                 <Text style={globalstyle.titlenote}>Engineering Technology Careers Fair</Text>
                 <Text style={globalstyle.datenotes}>Tuesday, 9:30 - 12:30</Text>
                 <Text style={globalstyle.datenote}>03 November 2026</Text>
